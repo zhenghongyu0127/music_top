@@ -4,7 +4,7 @@ import re
 import json
 import pymysql
 import time
-sql_client = pymysql.connect(host = '127.0.0.1',user = 'root',password = '',db = 'qq_ceshi_db',charset = 'utf8')
+sql_client = pymysql.connect(host = '127.0.0.1',user = 'root',password = '',db = 'qq_music',charset = 'utf8')
 cur = sql_client.cursor()
 # import pymongo
 # m = pymongo.MongoClient('127.0.0.1')['QQ_music_top20']['qq_music']
