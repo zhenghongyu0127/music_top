@@ -58,6 +58,7 @@ def parse_top(top_html):
 
         try:
             sql = 'insert into `qq_music_detail`(`top_title`,`top_time`,`song_name`,`song_id`,`song_mid`,`song_long_time`,`song_time_public`,`company_name`,`company_id`,`genre_name`,`language`,`album_name`,`album_id`,`singer_str`,`create_time`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+            sql_client.ping(reconnect=True)
             cur.execute(sql, (top_title, top_time,song_name,song_id, song_mid,song_long_time,song_time_public,company_name,company_id, genre_name, language, album_name,album_id, singer_str, create_time))
             sql_client.commit()
         except:
@@ -74,6 +75,7 @@ def parse_top(top_html):
 
         try:
             sql = 'insert into `qq_music_top`(`top_title`,`top_time`,`song_top`,`song_name`,`song_id`,`singer_name`,`singer_mid`,`create_time`) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)'
+            sql_client.ping(reconnect=True)
             cur.execute(sql,(top_title,top_time,song_top,song_name,song_id,singer_name,singer_mid,create_time))
             sql_client.commit()
         except:
