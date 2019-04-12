@@ -8,7 +8,8 @@ sql_client = pymysql.connect(host = '127.0.0.1',user = 'root',password = '',db =
 cur = sql_client.cursor()
 # import pymongo
 # m = pymongo.MongoClient('127.0.0.1')['QQ_music_top20']['qq_music']
-
+#  test 
+#test
 headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'}
 
 # 获取各排行榜url
